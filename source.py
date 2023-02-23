@@ -1,4 +1,4 @@
-import youtube_dl
+import yt_dlp
 import datetime
 import os
 import tkinter as tk
@@ -11,7 +11,7 @@ def download_video(video_url, download_path, quality='1080p'):
             'outtmpl': os.path.join(download_path, '%(title)s.%(ext)s'),
             'noplaylist': False,
         }
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(video_url, download=True)
         title = info_dict.get('title', '')
         description = info_dict.get('description', '')
@@ -23,7 +23,7 @@ def download_video(video_url, download_path, quality='1080p'):
             f.write(f"Description: {description}\n")
             f.write(f"Uploader: {uploader}\n")
             f.write(f"Upload date: {date}\n")
-    except youtube_dl.utils.DownloadError as e:
+    except yt_dlp.utils.DownloadError as e:
         print(f"DownloadError: {e}")
     except Exception as e:
         print(f"Error: {e}")
@@ -33,7 +33,6 @@ def download_video(video_url, download_path, quality='1080p'):
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("YT-Downloader")
-    root.iconbitmap("icon.ico")  # Added this line to set the icon
 
     tk.Label(root, text="URL:").grid(row=0, column=0, padx=10, pady=10)
     url_entry = tk.Entry(root, width=60)
