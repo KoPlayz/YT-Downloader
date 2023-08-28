@@ -1,0 +1,7 @@
+#$                      Version 3.0
+    Additions:
+Changelog now exists
+added download subtitles feature
+Error code showing
+    Removals:
+
