@@ -33,16 +33,8 @@ def download_video(video_url, download_path, quality='1080p'):
 if __name__ == "__main__":
     root = tk.Tk()
     root.title("YT-Downloader")
-<<<<<<< HEAD
-=======
-    root.iconbitmap("icon.ico")  # Added this line to set the icon
-<<<<<<< HEAD
     status_label = tk.Label(root, text="", fg="black")
     status_label.grid(row=3, column=1, columnspan=2, padx=10, pady=10)
->>>>>>> 34684ae (Automatic commit/push)
-=======
->>>>>>> f9d80a5 (Automatic commit/push)
-
     tk.Label(root, text="URL:").grid(row=0, column=0, padx=10, pady=10)
     url_entry = tk.Entry(root, width=60)
     url_entry.grid(row=0, column=1, columnspan=2, padx=10, pady=10)
@@ -63,5 +55,3 @@ if __name__ == "__main__":
     resolution_options = ["4K", "2K", "1080p", "720p", "480p", "360p", "240p"]
     resolution_dropdown = tk.OptionMenu(root, resolution_var, *resolution_options)
     resolution_dropdown.grid(row=4, column=1, padx=10, pady=10)
-
-    root.mainloop()
