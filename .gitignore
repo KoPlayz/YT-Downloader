@@ -1,0 +1,10 @@
+# Ignore specific folders
+Scripts/
+setups/
+.git/
+Source code/
+
+# Ignore specific file types
+*.png
+*.ico
+*.bat
