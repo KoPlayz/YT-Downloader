@@ -55,3 +55,5 @@ if __name__ == "__main__":
     resolution_options = ["4K", "2K", "1080p", "720p", "480p", "360p", "240p"]
     resolution_dropdown = tk.OptionMenu(root, resolution_var, *resolution_options)
     resolution_dropdown.grid(row=4, column=1, padx=10, pady=10)
+
+root.mainloop()
